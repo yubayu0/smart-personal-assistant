@@ -92,6 +92,11 @@ p {
   letter-spacing: 1px;
 }
 
+/* scrollbar kelua dai body */
+html {
+  scrollbar-gutter: stable;
+}
+
 
 @layer utilities {
   .bg-grid {
@@ -100,6 +105,13 @@ p {
       linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
     background-size: 30px 30px;
+  }
+  .bg-grid-lg {
+    background-color: white;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 
   .neu {
@@ -140,21 +152,23 @@ p {
     -ms-overflow-style: none;  /* IE & Edge */
     scrollbar-width: none;     /* Firefox */
   }
+
+  @keyframes cardShow {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-card-show {
+    animation: cardShow 0.2s ease-out forwards;
+  }
 }
 
 
-@keyframes cardShow {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-card-show {
-  animation: cardShow 0.2s ease-out forwards;
-}
+
 
 

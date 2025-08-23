@@ -26,7 +26,6 @@ const toolsData = [
     description: "laksjdkfj asldkjflksajdf alsdkfjkljasdf alsdkjflksajdf kasjdfkjsdf",
     feature: "privacy",
   },
-
 ]
 
 const Home = () => {
@@ -34,7 +33,7 @@ const Home = () => {
     <Container>
       <div className='flex flex-col justify-center items-center p-4 relative overflow-auto '>
         <div className='w-auto bg-black neu flex justify-center items-center py-2 px-8 mb-10'>
-          <h1 className='font-bold text-4xl text-yellow-300'>
+          <h1 className='font-bold text-center text-4xl text-yellow-300'>
             LOCAL AI PLAYGROUND
           </h1>
         </div>
@@ -49,7 +48,6 @@ const Home = () => {
           )
           )}
         </div>
-
       </div >
     </Container >
   )

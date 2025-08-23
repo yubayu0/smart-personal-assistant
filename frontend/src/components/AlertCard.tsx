@@ -18,10 +18,10 @@ const AlertCard = (props: alertCardProps) => {
 
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Tutup jika klik di luar card
   useClickOutside(cardRef, () => {
     if (closeCard) closeCard();
   });
+
   return (
     <div ref={cardRef} className='w-120 h-90 bg-white border-2 border-black rounded-xl overflow-auto animate-card-show'>
       <div className='flex justify-between items-center bg-blue-500 h-2/10 px-4'>
